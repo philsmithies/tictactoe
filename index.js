@@ -14,3 +14,4 @@ const Player = (name) => {
 
 
 const jimmie = Player('jim');
+const bill = Player('bill');
