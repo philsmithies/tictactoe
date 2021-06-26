@@ -1,5 +1,5 @@
 const gameBoard = (function(){
-  const gameBoard = ['X', '0', 'X', '0', 'X', '0', 'X', 'X', '0', 'X']
+  const gameBoard = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
   const newGame = "wtf"
   return {
     gameBoard: gameBoard
@@ -8,16 +8,24 @@ const gameBoard = (function(){
 
 const displayController = (function(){
   const displayController = document.getElementById('displayController')
-  for (i = 0; i < 9; i++){
-    const createP = document.createElement('P')
-    const createDiv = document.createElement('div')
-    // createButton.addEventListener('click', () => {
-    //   console.log('clicked')
-    // })
-    createP.innerText = gameBoard.gameBoard[i]
-    createDiv.appendChild(createP)
-    createDiv.classList.add('square')
-    displayController.appendChild(createDiv)
+  const buildBoard = function () {
+    gameBoard.gameBoard.map((x, i) => {
+      const createButton = document.createElement('button')
+      const createDiv = document.createElement('div')
+      createButton.innerText = gameBoard.gameBoard[i]
+      createButton.addEventListener('click', () =>{
+        gameBoard.gameBoard[i] = 'X'
+        console.log(gameBoard.gameBoard)
+        createButton.innerText = gameBoard.gameBoard[i]
+      })
+      createDiv.appendChild(createButton)
+      createDiv.classList.add('square')
+      displayController.appendChild(createDiv)
+    })
+  }
+  buildBoard()
+  return {
+    buildBoard: buildBoard
   }
 })();
 
