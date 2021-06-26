@@ -12,3 +12,5 @@ const Player = (name) => {
   return {getName}
 }
 
+
+const jimmie = Player('jim');
