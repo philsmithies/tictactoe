@@ -17,7 +17,11 @@ const Game = (one = null, two = null, gameBoard) => {
   }
 
   const move = (index, value) => {
-    gb.move(index, value)
+    if (gb.board[index] != 'X') {
+      gb.move(index, value) 
+    } else {
+      throw new Error('Space is taken')
+    }
   }
 
   return {

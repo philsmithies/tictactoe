@@ -9,6 +9,10 @@ const g = Game(p1, p2, gb)
 
 describe("basic gameboard", () => {
 
+  beforeEach(() => {
+    g.newGame();
+  });
+
   test("it will start with a score of 0", () => {
     expect(g.score).toEqual(0);
   });
@@ -30,8 +34,14 @@ describe("basic gameboard", () => {
 
   test('it can make a move', () => {
     expect(g.gb.board).toEqual(['1', '2', '3', '4', '5', '6', '7', '8', '9'])
-    expect(g.move(1, 'X'))
+    g.move(1, 'X')
     expect(g.gb.board).toEqual(['1', 'X', '3', '4', '5', '6', '7', '8', '9'])
+  })
+
+  test(`it can't make a move on a taken space`, () => {
+    expect(g.gb.board).toEqual(['1', '2', '3', '4', '5', '6', '7', '8', '9'])
+    g.move(1, 'X')
+    expect(() => { g.move(1, 'X'); }).toThrow(Error('Space is taken'));
   })
 
   test('it can reset the board', () => {
