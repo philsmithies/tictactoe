@@ -17,9 +17,12 @@ describe("basic gameboard", () => {
     expect(g.playerOne.isMyTurn).toBe(false)
     expect(g.playerTwo.isMyTurn).toBe(true)
   })
+
   test('it can toggle turns', () => {
     expect(g.playerOne.isMyTurn).toBe(false)
-    g.playerOne.toggleTurn()
+    expect(g.playerTwo.isMyTurn).toBe(true)
+    g.changeTurn()
     expect(g.playerOne.isMyTurn).toBe(true)
+    expect(g.playerTwo.isMyTurn).toBe(false)
   })
 })

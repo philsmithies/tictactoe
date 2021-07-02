@@ -1,12 +1,13 @@
 const Player = (turn, name) => {
   let playerName = name;
   let isMyTurn = turn;
-  function toggleTurn() { 
-    this.isMyTurn = !this.isMyTurn 
+  const toggleTurn = () => { 
+    console.log(`toggle: ${isMyTurn}`)
+    isMyTurn = !isMyTurn 
   }
   return {
-    isMyTurn,
-    playerName,
+    get isMyTurn() { return isMyTurn },
+    get playerName() { return playerName },
     toggleTurn
   }
 }

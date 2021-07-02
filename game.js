@@ -23,4 +23,8 @@ const Game = (one = null, two = null) => {
   }
 }
 
+const p1 = Player(false, "P1")
+const p2 = Player(true, "P2")
+const g = Game(p1, p2)
+
 module.exports = Game
