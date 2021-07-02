@@ -8,8 +8,7 @@ const Game = (one = null, two = null, gameBoard) => {
   let gb = gameBoard
 
   const newGame = () => {
-    // console.log(gb)
-    // gb.board = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    gb.resetBoard()
   }
 
   const changeTurn = () => {

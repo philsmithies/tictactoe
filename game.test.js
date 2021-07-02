@@ -33,4 +33,9 @@ describe("basic gameboard", () => {
     expect(g.move(1, 'X'))
     expect(g.gb.board).toEqual(['1', 'X', '3', '4', '5', '6', '7', '8', '9'])
   })
+
+  test('it can reset the board', () => {
+    g.newGame()
+    expect(g.gb.board).toEqual(['1', '2', '3', '4', '5', '6', '7', '8', '9'])
+  })
 })
