@@ -1,12 +1,12 @@
 const GameBoard = () => {
-  let board = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  let board = ['-', '-', '-', '-', '-', '-', '-', '-', '-'];
 
   const move = (index, value) => {
     board[index] = value
   }
 
   const resetBoard = () => {
-    board = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    board = ['-', '-', '-', '-', '-', '-', '-', '-', '-']
   }
 
   return {
