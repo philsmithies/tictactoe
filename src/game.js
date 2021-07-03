@@ -16,15 +16,17 @@ const Game = (one = null, two = null, gameBoard) => {
   }
 
   const move = (index, value) => {
-    if (value == 'X' || value == 'O' ) {
+    if (value == 'X' || value == 'O' && winner == '') {
       if (gb.board[index] != 'X' && gb.board[index] != 'O') {
         gb.move(index, value) 
         changeTurn()
         checkWin(index)
       } else {
+        if (winner == '') alert('Space is Taken')
         throw new Error('Space is taken')
       }
     } else {
+      alert('Play Again?')
       throw new Error('Invalid Character')
     }
   }
@@ -58,7 +60,7 @@ const Game = (one = null, two = null, gameBoard) => {
 
   const isDraw = () => {
     for(let i=0; i<9; i++){
-      if (gb.board == '-') return false;
+      if (gb.board[i] == '-') return false;
     }
     winner = 'Draw'
     return true

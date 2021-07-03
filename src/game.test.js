@@ -1,6 +1,6 @@
-const Game = require("./src/game");
-const GameBoard = require("./src/gameBoard");
-const Player = require("./src/player");
+const Game = require("./game");
+const GameBoard = require("./gameBoard");
+const Player = require("./player");
 
 const p1 = Player(false, "P1")
 const p2 = Player(true, "P2")

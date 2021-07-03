@@ -10,7 +10,8 @@ const DisplayController = (() => {
   const displayController = document.getElementById("displayController");
   const turn = document.getElementById("turn");
 
-  const buildBoard = function () {
+  const buildBoard = function () {  
+
     game.gb.board.map((x, i) => {
       const createDiv = document.createElement("div");
       createDiv.classList.add("square");
@@ -21,8 +22,18 @@ const DisplayController = (() => {
       }
 
       createDiv.addEventListener('click', () => {
-        console.log('clciekd')
-        game.move(i, 'X')
+        if (game.playerOne.isMyTurn) {
+          game.move(i, 'X')
+        } else {
+          game.move(i, 'O')
+        }
+        if (game.winner == 'X' || game.winner == "O"){
+          turn.innerText = `The Winner is ${game.winner}`
+        } else if (game.playerOne.isMyTurn) {
+          turn.innerText = "X's Turn" 
+        } else {
+          turn.innerText = "O's Turn" 
+        }
         createDiv.innerText = game.gb.board[i]
       })
       displayController.appendChild(createDiv)
