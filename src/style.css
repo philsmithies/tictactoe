@@ -1,13 +1,12 @@
 /*------- fonts --------*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
 
 /*------- default styling --------*/
 body {
   background-color: antiquewhite;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 nav {
@@ -19,20 +18,20 @@ nav {
   font-size: 1.4em;
 }
 
-#turn{
+#turn {
   font-size: 1.3em;
   font-weight: 700;
   padding: 2em;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#displayController{
+#displayController {
   display: grid;
   width: 500px;
   height: 500px;
@@ -40,7 +39,7 @@ nav {
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-.square{
+.square {
   font-size: 3rem;
   display: flex;
   justify-content: center;
@@ -51,7 +50,7 @@ nav {
   /* transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1); */
 }
 
-.square:hover{
+.square:hover {
   cursor: pointer;
   background-color: rgb(255, 189, 67);
 }
