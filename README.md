@@ -2,11 +2,11 @@
 
 - Building the classic family favourite using javascript modules and factory functions. 
 
-🖥  ⤫   ⃝ 
+👾
 <br>
 [Live Demo](https://philsmithies.github.io/tictactoe/) 
 
-<img src="./tictactoe_preview.gif" style="width: 200px;" alt="tic tac toe demo">
+<img src="./tictactoe_preview.gif" style="width: 100px;" alt="tic tac toe demo">
 
 
 To Run:
