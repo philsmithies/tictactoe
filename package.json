@@ -1,16 +1,37 @@
-
 {
   "devDependencies": {
     "eslint": "^7.29.0",
-    "jest": "^27.0.6"
+    "jest": "^27.0.6",
+    "style-loader": "^3.0.0"
   },
   "scripts": {
     "test": "jest",
-    "watch": "jest --watch *.js"
+    "watch": "jest --watch *.js",
+    "build": "webpack",
+    "watchWp": "webpack --watch"
   },
-  "compilerOptions": {     
+  "compilerOptions": {
     "module": "es6",
-    "target": "es5"    
+    "target": "es5"
+  },
+  "name": "tictactoe",
+  "description": "- Building the classic family favourite using javascript modules and factory functions.",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philsmithies/tictactoe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philsmithies/tictactoe/issues"
+  },
+  "homepage": "https://github.com/philsmithies/tictactoe#readme",
+  "dependencies": {
+    "css-loader": "^5.2.6",
+    "lodash": "^4.17.21",
+    "webpack": "^5.42.0",
+    "webpack-cli": "^4.7.2"
   }
 }
-
