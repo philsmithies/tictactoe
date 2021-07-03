@@ -1,6 +1,3 @@
-const Player = require("./player");
-const gameBoard = require("./gameBoard");
-
 const Game = (one = null, two = null, gameBoard) => {
   let score = 0;
   let playerOne = one // Player()
