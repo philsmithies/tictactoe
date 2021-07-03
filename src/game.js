@@ -7,6 +7,8 @@ const Game = (one = null, two = null, gameBoard) => {
 
   const newGame = () => {
     gb.resetBoard();
+    playerOne.isMyTurn = true
+    playerOne.isMyTurn = false
     winner = "";
   };
 

@@ -8,10 +8,14 @@ const game = gameLogic(p1, p2, gb);
 
 const DisplayController = () => {
   const displayController = document.getElementById("displayController");
+
   const turn = document.getElementById("turn");
-  turn.innerText = `X's Turn`
+  const newGame = document.getElementById("newGame");
 
   const buildBoard = function () {
+    displayController.innerHTML = ''
+    turn.innerText = `X's Turn`
+
     game.gb.board.map((x, i) => {
       const createDiv = document.createElement("div");
       createDiv.classList.add("square");
@@ -23,6 +27,15 @@ const DisplayController = () => {
       }
 
       createDiv.addEventListener("click", () => {
+
+        newGame.id = 'activeNewGame'
+
+        newGame.addEventListener('click', () =>{
+          newGame.id = 'newGame'
+          game.newGame()
+          buildBoard()
+        })
+
         if (game.playerOne.isMyTurn) {
           game.move(i, "X");
         } else {
@@ -41,6 +54,7 @@ const DisplayController = () => {
       });
       displayController.appendChild(createDiv);
     });
+
   };
 
   return {
