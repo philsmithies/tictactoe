@@ -6,7 +6,7 @@
 <br>
 [Live Demo](https://philsmithies.github.io/tictactoe/) 
 
-<img src="./tictactoe_preview.gif" width="200" alt="tic tac toe demo">
+<img src="./tictactoe_preview.gif" width="500" alt="tic tac toe demo">
 
 
 To Run:
